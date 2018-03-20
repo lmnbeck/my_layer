@@ -2,7 +2,7 @@
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
-;; Author: lmn <lmn@lmn-Alienware-17>
+;; Author:  <nli5@SHE9-W34201>
 ;; URL: https://github.com/syl20bnr/spacemacs
 ;;
 ;; This file is not part of GNU Emacs.
@@ -31,6 +31,7 @@
 
 (defconst lmn-packages
   '(ag
+    winnow
     )
   "The list of Lisp packages required by the lmn layer.
 
@@ -58,9 +59,17 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
-
+;; (defun lmn/init-yasnippet()
+;;     (use-package yasnippet)
+;;     )
+;; (defun lmn/init-company()
+;;   (use-package company))
+;; ;
 (defun lmn/init-ag()
   (use-package ag)
   )
 
+(defun lmn/init-winnow()
+  (use-package winnow)
+  )
 ;;; packages.el ends here

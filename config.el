@@ -1,4 +1,4 @@
-;;; config.el --- mu4e Layer configuration File for Spacemacs
+;;; config.el --- lmn Layer config File for Spacemacs
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;
@@ -9,17 +9,32 @@
 ;;
 ;;; License: GPLv3
 
-;; (defvar mu4e-installation-path nil
-;;   "Installation path for mu4e.")
+;; variables
 
-;; (defvar mu4e-account-alist nil
-;;   "Account alist for custom multi-account compose.")
+;;foreground and Background Color
+;(set-foreground-color "black")
+;(set-background-color "old lace")
+;; (setq-default dotspacemacs-configuration-layers '(
+;;                   (auto-completion :variables
+;;                                     auto-completion-return-key-behavior 'complete
+;;                                     auto-completion-tab-key-behavior 'cycle
+;;                                     auto-completion-complete-with-key-sequence nil
+;;                                     auto-completion-complete-with-key-sequence-delay 0.1
+;;                                     auto-completion-enable-snippets-in-popup t
+;;                                     auto-completion-enable-sort-by-usage t
+;;                                     auto-completion-private-snippets-directory nil)
+;;                 ))
+;; (setq-default dotspacemacs-configuration-layers
+                  ;; '((auto-completion :variables
+                                     ;; auto-completion-enable-snippets-in-popup t)))
 
-;; (defvar mu4e-enable-notifications nil
-;;   "If non-nil, enable desktop notifications for unread emails.")
-
-;; (defvar mu4e-enable-mode-line nil
-;;   "If non-nil, enable display of unread emails in mode-line.")
-
-;; (when mu4e-installation-path
-;;   (push mu4e-installation-path load-path))
+(setq auto-completion-return-key-behavior 'complete)
+(setq auto-completion-tab-key-behavior 'cycle)
+(setq auto-completion-complete-with-key-sequence nil)
+(setq auto-completion-complete-with-key-sequence-delay 0.1)
+(setq auto-completion-enable-snippets-in-popup t)
+(setq auto-completion-enable-sort-by-usage t)
+(setq auto-completion-private-snippets-directory nil)
+(setq ag-highlight-search t)
+(add-hook 'ag-mode-hook 'winnow-mode)
+(add-hook 'compilation-mode-hook 'winnow-mode)
